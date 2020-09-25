@@ -10,11 +10,16 @@ import SwiftUI
 @main
 struct SnapshotApp: App {
     let persistenceController = PersistenceController.shared
+    @StateObject private var uiState = UIState()
+
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationView {
+                SidebarView()
+            }
+            .frame(minHeight:400,idealHeight:800)
+            .environmentObject(uiState)
         }
     }
 }
