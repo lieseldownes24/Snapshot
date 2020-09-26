@@ -12,7 +12,6 @@ struct SnapshotApp: App {
     let persistenceController = PersistenceController.shared
     @StateObject private var uiState = UIState()
 
-
     var body: some Scene {
         WindowGroup {
             NavigationView {
@@ -20,6 +19,10 @@ struct SnapshotApp: App {
             }
             .frame(minHeight:400,idealHeight:800)
             .environmentObject(uiState)
+        }
+        
+        Settings {
+            PreferencesView()
         }
     }
 }

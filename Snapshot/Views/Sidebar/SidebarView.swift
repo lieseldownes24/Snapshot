@@ -23,11 +23,6 @@ struct SidebarView: View {
                 }.animation(nil)
             }
             
-            Section(header: Text("Account")) {
-                NavigationLink(destination: Text("test")) {
-                    Label("Google Account", systemImage: "key.icloud")
-                }.tag("google")
-            }
         }
         .animation(nil)
         .listStyle(SidebarListStyle())
