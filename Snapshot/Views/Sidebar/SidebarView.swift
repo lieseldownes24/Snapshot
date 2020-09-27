@@ -17,7 +17,7 @@ struct SidebarView: View {
         List(selection: $uiState.sidebarSelection) {
             Section(header: Text("Library")) {
                 ForEach(UIState.DefaultChannels.allCases, id: \.self) { item in
-                    NavigationLink(destination: PhotoStreamView(name: item.rawValue)) {
+                    NavigationLink(destination: PhotoStreamView()) {
                         Label(LocalizedStringKey(item.rawValue.capitalized), systemImage: item.icon())
                     }.tag(item.rawValue)
                 }.animation(nil)
@@ -30,11 +30,5 @@ struct SidebarView: View {
         .onHover { hovered in
             isHovered = hovered
         }
-    }
-}
-
-struct Sidebar_Previews: PreviewProvider {
-    static var previews: some View {
-        SidebarView()
     }
 }

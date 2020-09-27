@@ -18,6 +18,12 @@
 		45042B04251EA51F00BD8B5F /* UIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45042B03251EA51F00BD8B5F /* UIState.swift */; };
 		45042B0D251EAE2700BD8B5F /* PhotoStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45042B0C251EAE2700BD8B5F /* PhotoStreamView.swift */; };
 		456D34B2251EC9F100A80A1C /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456D34B1251EC9F100A80A1C /* PreferencesView.swift */; };
+		4573BB0E25209C1E00D6A6D2 /* PhotoStreamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573BB0D25209C1E00D6A6D2 /* PhotoStreamViewModel.swift */; };
+		4573BB1425209D6F00D6A6D2 /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573BB1325209D6F00D6A6D2 /* MediaItem.swift */; };
+		4573BB1C25209E0400D6A6D2 /* MediaMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573BB1B25209E0400D6A6D2 /* MediaMetadata.swift */; };
+		4573BB2125209E4800D6A6D2 /* PhotoMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573BB2025209E4800D6A6D2 /* PhotoMetadata.swift */; };
+		4573BB2625209EFE00D6A6D2 /* ContributorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573BB2525209EFE00D6A6D2 /* ContributorInfo.swift */; };
+		4573BB2C2520A1C800D6A6D2 /* OauthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4573BB2B2520A1C800D6A6D2 /* OauthClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +62,12 @@
 		45042B03251EA51F00BD8B5F /* UIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIState.swift; sourceTree = "<group>"; };
 		45042B0C251EAE2700BD8B5F /* PhotoStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStreamView.swift; sourceTree = "<group>"; };
 		456D34B1251EC9F100A80A1C /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		4573BB0D25209C1E00D6A6D2 /* PhotoStreamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewModel.swift; sourceTree = "<group>"; };
+		4573BB1325209D6F00D6A6D2 /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
+		4573BB1B25209E0400D6A6D2 /* MediaMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaMetadata.swift; sourceTree = "<group>"; };
+		4573BB2025209E4800D6A6D2 /* PhotoMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMetadata.swift; sourceTree = "<group>"; };
+		4573BB2525209EFE00D6A6D2 /* ContributorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorInfo.swift; sourceTree = "<group>"; };
+		4573BB2B2520A1C800D6A6D2 /* OauthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OauthClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,8 @@
 		45042AC0251EA1DE00BD8B5F /* Snapshot */ = {
 			isa = PBXGroup;
 			children = (
+				4573BB2A2520A1BB00D6A6D2 /* Network */,
+				4573BB1225209CA400D6A6D2 /* Models */,
 				45042B02251EA51500BD8B5F /* Environments */,
 				45042AF8251EA3F900BD8B5F /* Views */,
 				45042AC1251EA1DE00BD8B5F /* SnapshotApp.swift */,
@@ -175,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				45042B0C251EAE2700BD8B5F /* PhotoStreamView.swift */,
+				4573BB0D25209C1E00D6A6D2 /* PhotoStreamViewModel.swift */,
 			);
 			path = Streams;
 			sourceTree = "<group>";
@@ -185,6 +200,25 @@
 				456D34B1251EC9F100A80A1C /* PreferencesView.swift */,
 			);
 			path = Preferences;
+			sourceTree = "<group>";
+		};
+		4573BB1225209CA400D6A6D2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4573BB1325209D6F00D6A6D2 /* MediaItem.swift */,
+				4573BB1B25209E0400D6A6D2 /* MediaMetadata.swift */,
+				4573BB2025209E4800D6A6D2 /* PhotoMetadata.swift */,
+				4573BB2525209EFE00D6A6D2 /* ContributorInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4573BB2A2520A1BB00D6A6D2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4573BB2B2520A1C800D6A6D2 /* OauthClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,11 +352,17 @@
 			files = (
 				45042B04251EA51F00BD8B5F /* UIState.swift in Sources */,
 				45042ACB251EA1E200BD8B5F /* Persistence.swift in Sources */,
+				4573BB2C2520A1C800D6A6D2 /* OauthClient.swift in Sources */,
+				4573BB1425209D6F00D6A6D2 /* MediaItem.swift in Sources */,
+				4573BB1C25209E0400D6A6D2 /* MediaMetadata.swift in Sources */,
+				4573BB2125209E4800D6A6D2 /* PhotoMetadata.swift in Sources */,
 				45042AFB251EA44100BD8B5F /* SidebarView.swift in Sources */,
 				45042B0D251EAE2700BD8B5F /* PhotoStreamView.swift in Sources */,
 				45042ACE251EA1E200BD8B5F /* Snapshot.xcdatamodeld in Sources */,
 				45042AC2251EA1DE00BD8B5F /* SnapshotApp.swift in Sources */,
 				456D34B2251EC9F100A80A1C /* PreferencesView.swift in Sources */,
+				4573BB0E25209C1E00D6A6D2 /* PhotoStreamViewModel.swift in Sources */,
+				4573BB2625209EFE00D6A6D2 /* ContributorInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

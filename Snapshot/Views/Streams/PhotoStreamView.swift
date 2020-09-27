@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct PhotoStreamView: View {
-    init(name: String) {
-        
-    }
-
+    
+    @StateObject private var viewModel: PhotoStreamViewModel
+    
+    init() {
+            _viewModel = StateObject(wrappedValue: PhotoStreamViewModel())
+        }
+    
     var body: some View {
         NavigationView {
             Text("test")
@@ -22,12 +25,13 @@ struct PhotoStreamView: View {
                .frame(width: 20, height: 20)
            }
         }
-        .navigationTitle("view")
+        .navigationTitle("Photostream")
+        .navigationSubtitle("1000 photos")
     }
 }
 
 struct PhotoStreamView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotoStreamView(name: "Test")
+        PhotoStreamView()
     }
 }
